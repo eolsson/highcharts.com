@@ -1689,7 +1689,7 @@ SVGElement.prototype = {
 	symbolAttr: function(hash) {
 		var wrapper = this;
 		
-		each (['x', 'y', 'r', 'start', 'end', 'width', 'height', 'innerR'], function(key) {
+		each(['x', 'y', 'r', 'start', 'end', 'width', 'height', 'innerR'], function(key) {
 			wrapper[key] = pick(hash[key], wrapper[key]);
 		});
 		
@@ -5891,7 +5891,7 @@ function Chart (options, callback) {
 			
 				// hide previous hoverPoints and set new
 				if (hoverPoints) {
-					each (hoverPoints, function(point) {
+					each(hoverPoints, function(point) {
 						point.setState();
 					});
 				}
@@ -5929,7 +5929,7 @@ function Chart (options, callback) {
 				
 				// hide previous hoverPoints and set new
 				if (hoverPoints) {
-					each (hoverPoints, function(point) {
+					each(hoverPoints, function(point) {
 						point.setState();
 					});
 				}
@@ -8672,7 +8672,7 @@ Series.prototype = {
 		// connect nulls
 		if (series.options.connectNulls) {
 			for (i = data.length - 1; i >= 0; i--) {
-				if (data[i].y === null && data[i - 1] && data [i + 1]) {
+				if (data[i].y === null && data[i - 1] && data[i + 1]) {
 					data.splice(i, 1);
 				}
 			}
